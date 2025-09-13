@@ -1,10 +1,18 @@
+html, body {
+  width: 100%;
+  margin: 0;   /* Removes default margin */
+  padding: 0;  /* Removes default padding */
+  box-sizing: border-box;
+}
+
 body{
   /*Font family created by Intel from input of low vision devs*/
   font-family: "Intel One Mono", monospace;
   background: linear-gradient(-45deg, #FFFFFF, #00C7FD, #071039, #0068B5);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 10s ease infinite;
 	height: 100vh;
+  
 }
 
 @keyframes gradient {
@@ -20,20 +28,130 @@ body{
 }
 /* Add your CSS here */
 header {
-  background-color: rgba(0, 104, 181, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 1em;
-  margin: 3em 3em 0em 3em;
+  margin: 0em 0em 2em 0em;
   text-align: center;
 }
-
-img {
-  width : 20%;
-  padding: 1em;
+#header-content {
+  display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
+header img {
+  width : 5em;
+  justify-content: left;
+}
+
 h1 {
+  width: 50em;
+  color: white;
+  font-size: 2.5em;
+}
+
+header p {
+  color: rgba(0, 199, 253);
+  width: 70%;
+  text-align: center; /* This centers the text inside the paragraph */
+  margin-left: auto;  /* Optional: centers the block itself if it has a width */
+  margin-right: auto; /* Optional: centers the block itself if it has a width */
+}
+
+
+/* Make the timeline section scroll horizontally */
+section {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex; /* Arrange cards in a row */
+  flex-direction: row; /* Horizontal direction */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 1rem; /* Space between cards */
+  margin: 1em;
+  text-align: center;
+
+  /* Hide the horizontal scrollbar (works in most browsers) */
+  scrollbar-width: none; /* Firefox */
+}
+
+section::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+
+}
+
+/* Make each card a fixed width for easy scrolling */
+section > div {
+  background-color: rgba(0, 104, 181, 0.8);
+  min-width: 20em; /* Set a minimum width for each card */
+  max-width: 30em; /* Optional: set a max width for cards */
+  flex: 0 0 auto; /* Prevent cards from shrinking */
+  margin: 1em; /* Space between cards */
+  padding: 1rem;
+  position: relative; /* Needed for absolute positioning of popup paragraph */
+}
+
+/* Hide the paragraph inside each card by default */
+section > div p {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box; /* Ensures popup matches card width including padding */
+  height: 100%;
+  background: rgba(255,255,255,0.97);
+  color: #071039;
+  padding: 1em;
+  box-shadow: 0 4em 16em rgba(0,0,0,0.15);
+  z-index: 10;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  }
+section > div img {
+  width: auto;
+  height: 10em;
+}
+
+/* Show the paragraph when hovering over the card */
+section > div:hover p {
+  opacity: 1;
+  pointer-events: auto;
+  /* The popup will fade in above the card */
+}
+/* Remove extra closing brace above */
+#card1 {
+  flex: 1;
+}
+#card2 {
+  flex: 2;
+}
+#card3 {
+  flex: 3;
+}
+#card4 {
+  flex: 4;
+}
+#card5 {
+  flex: 5;
+}
+#card6 {
+  flex: 6;
+}
+#card7 {
+  flex: 7;
+}
+#card8 {
+  flex: 8;
+}
+#card9 {
+  flex: 9;
+}
+ #info {
   text-align: center;
   color: white;
-  font-size: 3em;
-}
+  padding-bottom: 1em;
+ }
