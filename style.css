@@ -42,7 +42,7 @@ header img {
 h1 {
   width: 50em;
   color: white;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 header p {
@@ -71,7 +71,6 @@ section::-webkit-scrollbar {
 section > div {
   background-color: rgba(0, 104, 181, 0.8);
   min-width: 20em;
-  max-width: 30em;
   flex: 0 0 auto;
   margin: 1em;
   padding: 1rem;
@@ -131,7 +130,7 @@ section > div:hover p {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
   body { font-size: 1em; }
   h1 { font-size: 1.5em; }
   header p {
