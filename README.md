@@ -13,3 +13,5 @@ Launch a Codespace to get started! Remember to Commit and Push your project chan
 - The page styling feels slightly not aligned with the current layout (though I am LOVING that dynamic background, that is so cool) as some of the text is hugging the sides of the page, some spacing is a little uneven, and some batches of text seems centered while others are not (though I know this can be tricky)! Try using/adjusting your CSS variables for font sizes, margins, and colors to maintain company alignment and polish across the site. You can do this! 📏​
 
 - This is just a suggestion, but you could try adding in a border perhaps around those images for a nice POP of color! You could maybe do one of the blues you have on page currently!
+
+Note: Need to check if you can scroll through the website using a traditional mouse.
